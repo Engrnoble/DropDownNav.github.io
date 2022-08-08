@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+ 
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; padding: 10px;}
+    .attribution a { color: hsl(228, 45%, 44%); text-decoration: none;}
+  </style>
+</head>
+<body>
+ <header>
+   <nav>
+    <div id="logo">
+      <img src="images/logo.svg" alt="" id="imgg">
+    </div>
+<!--
+    <input type="checkbox" id="checkbox_toggle" />
+    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+  -->
+    <div id="container" class="container">
+      <ul id="nav-List" class="nav-List">
+        <li class="features">
+          <a href="#">Features <img src="images/icon-arrow-up.svg" alt=""></a>
+             <ul class="dropdown">
+               <li>
+                 <a href="/"><img src="images/icon-todo.svg" alt="" id="icon"> Todo List</a>
+               </li>
+               <li>
+                <a href="/"><img src="images/icon-calendar.svg" alt="" id="icon"> Calendar</a>
+               </li>
+               <li>
+                 <a href="/"><img src="images/icon-reminders.svg" alt="" id="icon"> Reminders</a>
+               </li>
+               <li>
+                 <a href="/"><img src="images/icon-planning.svg" alt="" id="icon"> Planning</a>
+               </li>
+             </ul>      
+        </li>
+        <li class="company">
+         <a href="#">Company <img src="images/icon-arrow-up.svg" alt=""></a>
+            <ul class="dropdown">
+              <li><a href="/">History</a></li>
+              <li><a href="/">Our Team</a></li>
+              <li><a href="/">Blog</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+ 
+      <div id="other-links">
+        <ul class="links">
+          <li><a href="/">Login</a></li>
+          <li><a href="/">Register</a></li>
+        </ul>
+      </div>
+    </div> 
+    
+    <div class="menu" id="toggle">
+      <div class="menu-line"></div>
+      <div class="menu-line"></div>
+      <div class="menu-line"></div>
+    </div>
+   </nav>
+ </header>
+
+ <main>
+
+   <div class="content-div">
+    <h1>
+        Make <span class="block">remote work</span>
+    </h1>
+    <section class="mobile">
+      <p>
+        Get your team in sync, no matter your location.
+         Streamline processes, create team rituals, and watch productivity soar.
+      </p>
+    </section>
+    <section class="learn">
+      <a href="/">Learn more</a>
+    </section>
+
+    <section class="SRTT">
+      <img src="images/client-databiz.svg" alt="" id="srt">
+      <img src="images/client-audiophile.svg" alt="" id="srt">
+      <img src="images/client-meet.svg" alt="" id="srt">
+      <img src="images/client-maker.svg" alt="" id="srt">
+    </section>
+   </div>
+
+   <div class="avatar-div">
+
+  </div>
+ </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Michael Sunday</a>.
+  </div>
+
+  <script>
+    const toggleButton = document.getElementById("toggle");
+    const conT = document.getElementById("container");
+    toggleButton.addEventListener( 'click', function() {
+       conT.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+/* Written on 22/07/2022 by Michael(@mikey_noble) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#icon {
+    margin-right: 10px;
+    top: 10px;
+}
+
+#nav-List {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+    list-style: none;
+    position: absolute;
+    left: 180px;
+}
+
+#nav-List li {
+    padding: 5px 14px;
+}
+
+#nav-List li:hover {
+    background-color: hsl(0, 0%, 98%);
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+
+#nav-List li a {
+    text-decoration: none;
+    color: hsl(0, 0%, 8%);
+}
+
+.dropdown {
+    list-style-type: none;
+    position: absolute;
+    padding: 1em 1em;
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: hsl(0, 0%, 8%);
+}
+
+.features, .company {
+    position: relative;
+}
+
+.company:hover .dropdown{
+    display: block;
+}
+
+.features:hover .dropdown{
+    display: block;
+}
+/* The last div */
+#other-links ul li{
+    display: inline;
+}
+
+#other-links li {
+    list-style: none;
+    margin-right: 10px;
+}
+
+#other-links li a:hover {
+    background-color: hsl(0, 0%, 98%);
+    border: 1px solid hsl(0, 0%, 8%);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#other-links li a {
+    text-decoration: none;
+    color: hsl(0, 0%, 8%);
+    margin-right: 10px;
+}
+
+.menu-line {
+    width: 20px;
+    height: 3px;
+    background-color: hsl(0, 0%, 8%);
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.menu {
+    display: none;
+}
+
+#imgg {
+    margin-top: 1em;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 500px;
+}
+
+.content-div {
+    padding: 10px;
+    text-align: left;
+}
+
+.content-div h1 {
+    color: hsl(0, 0%, 8%);
+    font-size: 4.5em;
+    margin-top: 1em;
+}
+
+.content-div p {
+    height: 30%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    width: 55%;
+    color: hsl(0, 0%, 41%);
+}
+
+.content-div a {
+    text-decoration: none;
+    background-color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 2em;
+}
+
+.learn {
+    margin-top: 1.5em;
+}
+
+section {
+    padding: 10px;
+}
+
+.avatar-div {
+    padding: 10px;
+    background-image: url(images/image-hero-mobile.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: contain;
+}
+
+.block {
+    display: block;
+}
+
+main {
+    margin: 2em;
+}
+/* image srt section */
+.SRTT {
+    margin-top: 3em;
+}
+
+#srt {
+    width: 5em;
+    margin-left: 2em;
+}
+
+@media screen and (max-width:375px) {
+.container { 
+    display:none;
+    position: absolute;
+    background-color:  hsl(0, 0%, 98%);
+    right: 0;
+    padding: 16px 0;
+    height: 100vh;
+    top: 2em;
+    text-align: left;
+    width: 65%;
+}
+
+#nav-List {
+    display: block;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+ 
+.menu {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 40px;
+}
+
+#other-links {
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+
+#other-links ul li {
+    display: block;
+    margin: 30px 15px;
+    border: 1px solid hsl(0, 0%, 8%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#other-links li a:hover {
+    border: none;
+    color: hsl(0, 0%, 8%);
+}
+/* for JS toggle menu */
+.active {
+    display: block;
+}
+
+.dropdown {
+    left: 50%;
+    top: 50px;
+    position: static;
+}
+
+main {
+    display: table;
+    margin-top: 1em;
+}
+ 
+.avatar-div {
+    background-image: url(images/image-hero-desktop.png);
+    height: 400px;
+    margin-top: 1em;
+    width: 100%;
+}
+
+.content-div {
+    text-align: center;
+    height: inherit;
+    display: table-footer-group;
+}
+
+.content-div p {
+    margin-top: 1em;
+    width: 105%;
+}
+
+.block {
+    display: inline;
+}
+
+.content-div h1 {
+    font-size: 2em;
+}
+
+.content-div a {
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.mobile {
+    text-align: center;
+}
+
+.SRTT {
+    position: static;
+    margin-top: 2em;
+}
+
+#srt {
+    width: 3em;
+    margin-left: 0.5em;
+}
+}
